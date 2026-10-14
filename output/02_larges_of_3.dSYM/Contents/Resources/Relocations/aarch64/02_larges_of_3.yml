@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/akashsingh/Downloads/C++/dsa-practice/output/02_larges_of_3'
+relocations:     []
+...
