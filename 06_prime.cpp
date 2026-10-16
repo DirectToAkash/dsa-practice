@@ -16,7 +16,7 @@
 using namespace std;
 
 int main() {
-    int num;
+    int num , N;
     cin>>num;
     bool isPrime = true;
     if(num <= 1){
@@ -30,14 +30,14 @@ int main() {
         }
       }
       if(isPrime==true){
-        cout<<"Its Prime"<<endl;
+        cout<<"Prime"<<endl;
       }
-      else cout<<"Not Prime"<<endl;
+      else cout<<"Not prime"<<endl;
 
-
-     for(int i=2 ; i<=num ;i++){
+      cin>>N;
+     for(int i=2 ; i<=N ;i++){
       isPrime = true;
-          for(int j=2 ; j<i ; j++){
+          for(int j=2 ; j*j<=i ; j++){
             if(i%j == 0){
               isPrime = false;
               break;
