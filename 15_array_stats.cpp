@@ -13,8 +13,57 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    // your code here
+int findMax(int arr[] , int size){
+    int max = arr[0];
+    for(int i=0;i<size;i++){
+      if(arr[i]>max){
+        max = arr[i];
+      }
+    }
+    return max;
+  }
 
-    return 0;
+int findMin(int arr[] , int size){
+    int min = arr[0];
+    for(int i=0;i<size;i++){
+      if(arr[i]<min){
+        min = arr[i];
+      }
+    }
+    return min;
+  }  
+
+  int findsum(int arr[] , int size){
+    int sum = 0;
+    for(int i=0;i<size;i++){
+      sum = sum + arr[i];
+      }
+      return sum;
+    }
+
+    double findAvg(int arr[] , int size){
+    int sum = 0;
+    
+    for(int i=0;i<size;i++){
+      sum = sum + arr[i];
+      }
+      return double(sum)/size;
+    }
+   
+   
+  
+
+int main() {
+  int n;
+  cin>>n;
+  int arr[n];
+  cout<<"Enter size of array";
+  for(int i = 0; i<n ; i++){
+    cin>>arr[i];
+  }
+
+  cout<<"Max :"<<findMax(arr,n);
+  cout<<"Min :"<<findMin(arr,n);
+  cout<<"Sum :"<<findsum(arr,n);
+  cout<<"Avg :"<<findAvg(arr,n);
 }
