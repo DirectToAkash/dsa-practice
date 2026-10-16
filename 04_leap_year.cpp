@@ -16,14 +16,14 @@ using namespace std;
 
 int main() {
   int year;
-    cout<<"Enter Year"<<endl;
+    
     cin>>year;
 
     if(year%4==0 && year%100!=0 || year%400==0){
-      cout<<"Leap Year"<<endl;
+      cout<<"Leap"<<endl;
     }
     else {
-      cout<< "not a leap year"<<endl;
+      cout<< "Not leap"<<endl;
     }
 
 
