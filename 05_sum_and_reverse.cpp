@@ -1,3 +1,10 @@
+// #5: Sum of digits and reverse of a number
+// Test cases:
+// 1234 -> sum 10, reverse 4321
+// 1200 -> sum 3, reverse 21
+// 0    -> sum 0, reverse 0
+// 7    -> sum 7, reverse 7
+// -123 -> sum -6, reverse -321
 #include<iostream>
 using namespace std;
 
