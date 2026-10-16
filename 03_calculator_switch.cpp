@@ -22,23 +22,23 @@ int main() {
   cin>>oper;
     switch(oper){
       case '+':
-        cout<<a+b;
+        cout<<a+b<<endl;
       break;
       case '-':
-        cout<<a-b;
+        cout<<a-b<<endl;
       break;
       case '*':
-        cout<<a*b;
+        cout<<a*b<<endl;
       break;
       case '/':
         if(b==0){
-          cout<<"Error : can not divide by 0";
+          cout<<"Error: division by zero"<<endl;
         }
-        else cout<<a/b;
+        else cout<<a/b<<endl;
       break;
 
       default:
-        cout<<"No matchig operator";
+        cout<<"Invalid operator"<<endl;
     }
 
 
