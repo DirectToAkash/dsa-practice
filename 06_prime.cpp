@@ -43,10 +43,11 @@ int main() {
               break;
             }
           }
+          
           if(isPrime){
             cout<<i<<" ";
           }
-        }
+        }cout<<endl;
 
       
 
