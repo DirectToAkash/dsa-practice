@@ -29,33 +29,24 @@ int main() {
         }
       }
       if(isPrime==true){
-        cout<<"Its Prime";
+        cout<<"Its Prime"<<endl;
       }
-      else cout<<"Not Prime";
+      else cout<<"Not Prime"<<endl;
 
 
-      for (int i = 2; i <= num; i++) {
-
-    bool isPrime = true;
-
-    for (int j = 2; j * j <= i; j++) {
-
-        if (i % j == 0) {
-
-            isPrime = false;
-
-            break;
-
-        }
-        
-}
-if (isPrime) {
-
-            cout << i << endl;
-
+     for(int i=2 ; i< num ;i++){
+      isPrime = true;
+          for(int j=2 ; j<i ; j++){
+            if(i%j == 0){
+              isPrime = false;
+              break;
+            }
+          }
+          if(isPrime){
+            cout<<i<<" ";
+          }
         }
 
-    }
       
 
     return 0;
