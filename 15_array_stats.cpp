@@ -30,7 +30,7 @@ int findMin(int arr[] , int size){
         min = arr[i];
       }
     }
-    return min<<;
+    return min;
   }  
 
   int findsum(int arr[] , int size){
