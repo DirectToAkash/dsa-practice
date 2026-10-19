@@ -30,7 +30,7 @@ int findMin(int arr[] , int size){
         min = arr[i];
       }
     }
-    return min;
+    return min<<;
   }  
 
   int findsum(int arr[] , int size){
@@ -62,8 +62,8 @@ int main() {
     cin>>arr[i];
   }
 
-  cout<<"Max :"<<findMax(arr,n);
-  cout<<"Min :"<<findMin(arr,n);
-  cout<<"Sum :"<<findsum(arr,n);
-  cout<<"Avg :"<<findAvg(arr,n);
+  cout<<"Max :"<<findMax(arr,n)<<endl;
+  cout<<"Min :"<<findMin(arr,n)<<endl;
+  cout<<"Sum :"<<findsum(arr,n)<<endl;
+  cout<<"Avg :"<<findAvg(arr,n)<<endl;
 }
