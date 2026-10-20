@@ -17,10 +17,7 @@ int main() {
   cin>>n;
   int a = 0;
   int b = 1;
-  cd ~/Downloads/C++/dsa-practice
-git add -A
-git commit -m "#9: fibonacci with two variables"
-git push origin main
+ 
 
   cout << a << " ";    
 if (n > 1) cout << b << " ";  
