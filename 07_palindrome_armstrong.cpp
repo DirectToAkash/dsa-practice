@@ -15,10 +15,58 @@
 */
 
 #include <iostream>
+#include <cmath>
 using namespace std;
 
+
+void palindrome(int num){
+  int main = num;
+  int temp;
+  int rev = 0;
+
+  while(num!=0){
+    temp = num%10;
+    rev = rev*10 + temp;
+    num = num/10;
+  }
+  if(main==rev){
+    cout<<"Palindrome"<<endl;
+  }
+  else {cout<<"Not Palindrome"<<endl;
+  }
+}
+
+void armstrong(int num){
+  int main = num;
+  int temp;
+  int temp2 = num;
+  int arm = 0;
+  int i = 0;
+
+  while(temp2!=0){
+    temp2 = temp2/10;
+    i++;
+  }
+
+  while(num!=0){
+    temp = num%10;
+    arm = arm + pow(temp, i);  
+    num = num/10;
+  }
+
+  if(main == arm){
+    cout<<"Armstrong"<<endl;
+  }
+  else{cout<<"Not Armstrong"<<endl;}
+
+
+}
+
 int main() {
-    // your code here
+  int num;
+    cin>>num;
+    palindrome(num);
+    armstrong(num);
 
     return 0;
 }
