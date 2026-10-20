@@ -13,7 +13,26 @@
 using namespace std;
 
 int main() {
-    // your code here
+  int n ;
+  cin>>n;
+  int a = 0;
+  int b = 1;
+  cd ~/Downloads/C++/dsa-practice
+git add -A
+git commit -m "#9: fibonacci with two variables"
+git push origin main
+
+  cout << a << " ";    
+if (n > 1) cout << b << " ";  
+
+  for(int i=3;i<=n;i++){
+    int next = a+b;
+    cout << next << " ";
+    a=b;
+    b=next;
+  }
+
+
 
     return 0;
 }
