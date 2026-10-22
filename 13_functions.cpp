@@ -16,8 +16,45 @@
 #include <iostream>
 using namespace std;
 
+void factorial(int n){
+  int total = 1;
+  for(int i=n; i>0;i--){
+    total = total*i;
+  }
+  cout<<total<<endl;
+}
+
+
+  void isPrime(int n){
+    if (n <= 1) {
+        cout << "Not A Prime" << endl;
+        return;
+    }
+    bool prime = true;
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) {
+             prime = false;
+    break;
+        }
+    }
+    if (prime) cout << "Prime" << endl;
+    else cout << "Not A Prime" << endl;
+}
+
+void gcd(int n , int m){
+  int start = (n < m) ? n : m;
+for(int i = start ; i>0 ; i--){
+    if(m%i==0 && n%i==0){
+      cout<<i<<endl;
+      break;
+    }
+  }
+}
+
 int main() {
-    // your code here
+    factorial(0);
+    isPrime(68);
+    gcd(32,64);
 
     return 0;
 }
