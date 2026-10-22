@@ -15,6 +15,7 @@
 
 #include <iostream>
 using namespace std;
+#include <cmath>
 
 void deciToBin(int n){
   int arr[32];
@@ -30,16 +31,33 @@ void deciToBin(int n){
     n = n/2;
   }
 }
-
  for(int j = i - 1 ; j>=0 ; j--){
   cout<<arr[j];
  }
+}
+
+void binToDeci(int n){
+  int result = 0;
+  int temp;
+  int i=0;
+
+  while(n!=0){
+    temp = n%10;
   
+    result = result + temp*pow(2,i);
+    i++;
+    n=n/10;
+  }
+cout<<result;
 }
 
 int main() {
-  int n;
-cin >> n;
-deciToBin(n);
-cout << endl;
+    int n, m;
+    cin >> n;
+    deciToBin(n);
+    cout << endl;
+
+    cin >> m;
+    binToDeci(m);
+    return 0;
 }
