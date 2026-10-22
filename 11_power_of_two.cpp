@@ -15,8 +15,19 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    
+bool isPowerOfTwo(int n){
+    if (n <= 0) return false;       // step 1
 
-    return 0;
+    while (n % 2 == 0) {         // step 2: while n is EVEN…
+        n = n /2;               // …cut it in half
+    }
+
+    return n == 1;               // step 3: is what's left equal to…?
+}
+
+int main(){
+    int n;
+    cin >> n;
+    if (isPowerOfTwo(n)) cout << "true" << endl;
+    else cout << "false" << endl;
 }
