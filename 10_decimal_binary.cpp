@@ -11,11 +11,35 @@
     1111 (binary)  ->  15
 */
 
+
+
 #include <iostream>
 using namespace std;
 
-int main() {
-    // your code here
+void deciToBin(int n){
+  int arr[32];
+  int i =0;
+  if(n==0){
+    cout<<"0";
+  }
+  else{
+  while(n!=0){
+    int temp = n%2;
+    arr[i] = temp;
+    i++;
+    n = n/2;
+  }
+}
 
-    return 0;
+ for(int j = i - 1 ; j>=0 ; j--){
+  cout<<arr[j];
+ }
+  
+}
+
+int main() {
+  int n;
+cin >> n;
+deciToBin(n);
+cout << endl;
 }
