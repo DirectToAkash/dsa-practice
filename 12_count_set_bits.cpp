@@ -14,8 +14,20 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    // your code here
 
-    return 0;
+
+int main() {
+  int n ;
+  int temp;
+  int count =0 ;
+  cin>>n;
+
+  while(n!=0){
+    temp=n%2;
+    if(temp==1){
+      count++;
+    }
+    n=n/2;
+  }
+  cout<<count;
 }
