@@ -14,8 +14,28 @@
 #include <iostream>
 using namespace std;
 
+void reverseArr(int arr[], int n){
+    int left = 0;
+    int right = n - 1;
+
+    while (left < right) {
+        int temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+        left++;
+        right--;
+    }
+}
+
 int main() {
-    // your code here
+  int n = 6;
+  int arr[] = {0,2,3,5,3,1};
+  reverseArr(arr,n);
+
+  for(int i=0 ; i<n ; i++){
+    cout<<arr[i]<<" ";
+  }
+    
 
     return 0;
 }
