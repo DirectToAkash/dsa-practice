@@ -13,8 +13,30 @@
 #include <iostream>
 using namespace std;
 
+
+
+void sortArr(int arr[] , int n){
+  bool isSorted = true;
+
+  for(int i=0;i<n-1;i++){
+    if(arr[i]>arr[i+1]){
+      isSorted =false ;
+      break;
+    }
+    isSorted =true;
+  }
+
+  if(isSorted){
+    cout<<"Sorted";
+  }
+  else{cout<<"Not Sorted";
+  }
+}
+
 int main() {
-    // your code here
+  int n = 6;
+    int arr[] = {5,3,2,2,5,12};
+    sortArr(arr,n);
 
     return 0;
 }
