@@ -14,8 +14,25 @@
 #include <iostream>
 using namespace std;
 
+void zerEnd(int arr[], int n){
+    int pos = 0;
+    int temp;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] != 0) {
+          temp = arr[pos];
+            arr[pos]=arr[i];
+            arr[i] = temp;
+
+            pos++;
+        }
+    }
+}
+
 int main() {
-    // your code here
+    int arr[] = {0,8,6,4,2,2,7,8};
+    int n = 8;
+    zerEnd(arr,n);
+    cout<<arr[7];
 
     return 0;
 }
