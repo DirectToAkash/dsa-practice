@@ -1,19 +1,35 @@
-/*
-  #21  Count vowels and consonants
-
-  Read a line (use getline). Count vowels and consonants. Ignore spaces, digits and symbols; handle uppercase too.
-
-  Test cases (all must pass before you push):
-    hello  ->  vowels 2, consonants 3
-    Hello World  ->  vowels 3, consonants 7
-    123 !!  ->  vowels 0, consonants 0
-*/
-
 #include <iostream>
+#include <string>
 using namespace std;
 
-int main() {
-    // your code here
 
+void volCon(string s){
+    int vowels = 0, consonants = 0;
+
+   for (int i = 0; i < s.length(); i++) {
+    char c = s[i];
+
+    // 1. uppercase → lowercase
+    if (c >= 'A' && c <= 'Z') {
+        c = c + 32;          // 'A' is 65, 'a' is 97. What's the gap?
+    }
+
+    // 2. vowel?
+    if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+        vowels++;
+    }
+    // 3. other letter?
+    else if (c >= 'b' && c <= 'z') {
+        consonants++;
+    }
+    // anything else is ignored automatically
+}
+cout << "vowels " << vowels << ", consonants " << consonants << endl;
+}
+
+int main() {
+    string s;
+    getline(cin, s);      // reads the whole line, spaces included
+    volCon(s);
     return 0;
 }
