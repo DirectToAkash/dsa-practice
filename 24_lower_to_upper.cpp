@@ -1,20 +1,25 @@
-/*
-  #24  Lowercase to uppercase (ASCII)
-
-  Convert a string to uppercase manually, using ASCII values and typecasting. No toupper().
-  Hint: 'a' is 97, 'A' is 65.
-
-  Test cases (all must pass before you push):
-    hello  ->  HELLO
-    Hello123  ->  HELLO123
-    ABC  ->  ABC
-*/
-
 #include <iostream>
+#include <string>                       
 using namespace std;
 
-int main() {
-    // your code here
 
+
+string LowUpp(string s){               
+    int left = 0;
+    int right = s.length() - 1;
+
+    for(int i = left; i <= right; i++){     
+        if(s[i] >= 'a' && s[i] <= 'z'){    
+            s[i] = s[i] - 32;
+        }
+       
+    }
+    return s;                          
+}
+
+int main() {
+    string s;                           
+    getline(cin, s);                    
+    cout << LowUpp(s) << endl;          
     return 0;
 }
