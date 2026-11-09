@@ -1,21 +1,31 @@
-/*
-  #23  Length of last word
-
-  Given a sentence, return the length of the last word. Watch out for trailing spaces.
-
-  Also submit on LeetCode: Length of Last Word #58
-
-  Test cases (all must pass before you push):
-    Hello World  ->  5
-       fly me   to   the moon    ->  4
-    a  ->  1
-*/
-
 #include <iostream>
+#include <string>
 using namespace std;
 
-int main() {
-    // your code here
 
+
+
+int lastLength(string s){
+    int count = 0;
+    int right = s.length() - 1;
+
+
+    while (right >= 0 && s[right] == ' ') {
+        right--;
+    }
+
+    
+    while (right >= 0 && s[right] != ' ') {
+        count++;
+        right--;
+    }
+    return count;
+}
+
+int main(){
+    string s;
+    getline(cin, s);
+    cout << lastLength(s) << endl;
+    
     return 0;
 }
